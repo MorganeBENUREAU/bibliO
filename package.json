@@ -1,0 +1,27 @@
+{
+  "name": "bibliO",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MorganeBENUREAU/bibliO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MorganeBENUREAU/bibliO/issues"
+  },
+  "homepage": "https://github.com/MorganeBENUREAU/bibliO#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "pg": "^8.6.0"
+  }
+}

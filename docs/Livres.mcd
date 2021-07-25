@@ -1,0 +1,11 @@
+GENRE: libellé
+contient, 0N GENRE, 1N LIVRE
+AUTEUR: référence, nom, prénom, liens site, date de naissance, date de mort, nationalité
+
+:
+LIVRE: référence, titre original, titre, résumé, genre, date de sortie, langue d'origine, nb page, image, prix broché, prix ebook
+a écrit, 1N AUTEUR, 1N LIVRE
+
+:
+édite, 1N EDITEUR, 11 LIVRE
+EDITEUR: nom, nationalité
