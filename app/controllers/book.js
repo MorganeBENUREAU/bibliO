@@ -12,7 +12,7 @@ const bookController = {
         try {
 
             const books = await bookDataMapper.getAll();
-            response.json({ data: books })
+            response.render('books', { books });
 
         } catch (error) {
             console.error(error);

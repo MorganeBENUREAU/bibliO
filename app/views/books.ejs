@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+    <main>
+        
+        <% for (const book of books) { %>
+            <article class="book-card">
+
+                <div class="header_footer-title">
+                    <h2 class="book-card-originalTitle"> <%= book.original_title %> </h2>
+                    <h3 class="book-card-title"> <%= book.title %> </h3>
+                </div>
+
+                <div class="img_left-text_right">
+                    <img src="<%= book.cover %>" alt="photo de <%= book.title %> ">
+                    <p class="book-card-summary"> <span class="summary"> résumé :</span> <%= book.summary %> </p>
+                </div>
+
+                <div class="header_footer-title">
+                    <p class="book-card-paperback_price"> Prix broché : <span class="book-card-priceNumber"> <%= book.paperback_price %> €</span> </p>
+                    <p class="book-card-ebook_price"> Prix ebook : <span class="book-card-priceNumber"> <%= book.ebook_price %> €</span> </p>
+                </div>
+
+            </article>
+        <% } %>
+
+    </main>
+    
+<%- include('partials/footer') %>

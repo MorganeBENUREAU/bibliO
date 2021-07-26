@@ -59,9 +59,9 @@ CREATE TABLE "book" (
     "language" country_iso_code_2 NOT NULL,
     "page_count" pint NOT NULL,
     "cover" text,
-    "paperback_price" pint,
+    "paperback_price" numeric NOT NULL,
     "isbn_ebook" text,
-    "ebook_price" pint,
+    "ebook_price" numeric NOT NULL,
     "publisher_id" int NOT NULL REFERENCES "publisher"("id"),
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ
