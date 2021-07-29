@@ -6,3 +6,21 @@ GET http://localhost:3000/api/books
 
 ### get on book
 GET http://localhost:3000/api/books/1
+
+### add a book
+POST http://localhost:3000/api/books
+Content-Type: application/json
+
+{
+    "isbn_paperback": "978-2-8112-0539-3",
+    "original_title": "Chicagoland Vampires",
+    "title": "Les Vampires de Chicago, Tome 1 : Certaines mettent les dents",
+    "summary": "Ils m’ont tuée. Ils m’ont soignée. Ils m’ont changée. Les vampires de Chicago ont décidé de révéler leur existence et ont fait de moi l’une des leurs. Certes, ma vie d’étudiante n’était pas très excitante, mais elle me convenait.     Maintenant je dois apprendre à maîtriser mes pouvoirs naissants sans pour autant jurer fidélité à Ethan Sullivan, le Maître de mon clan. D’accord, il m’a sauvé la vie, mais c’est quand même à cause de lui si je suis allergique au soleil ! S’il croit que je vais fondre sous prétexte qu’il a des siècles d’expérience en matière de séduction…     J’ai plus urgent : un tueur a une dent contre moi. Ça va saigner !",
+    "publication_year": 2011,
+    "language": "FR",
+    "page_count": 480,
+    "cover": "https://cdn1.booknode.com/book_cover/195/full/les-vampires-de-chicago-tome-1-certaines-mettent-les-dents-194651.jpg",
+    "paperback_price": 7.10,
+    "ebook_price": 5.99,
+    "publisher_id": 1
+}

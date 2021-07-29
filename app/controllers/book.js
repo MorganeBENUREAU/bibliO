@@ -24,7 +24,7 @@ const bookController = {
     /**
      * Get one book of by its id
      * @param {object} _ express request
-     * @param {object} response express response
+     * @param {object} _ response express response
      * @param {object} _ express next function
      */
     async getOneBook (request, response, next) {
@@ -43,7 +43,35 @@ const bookController = {
             response.json({ data: [], error: `A servor error occurred, please try again later`});
         }
         
-    }
+    },
+
+    /**
+     * Add book
+     * @param {object} _ express request
+     * @param {object} response express response
+     * @param {object} next express next function
+     */
+    async add(request, response, next) {
+        try {
+
+            const newBook = await bookDataMapper.addBook(request.body);
+
+            if(!newBook){
+                return next();
+            }
+        
+            response.status(201).json({ data: newBook });
+
+        } catch (error) {
+            trace.error(error);
+
+            if(error.code === '23505'){
+                return response.status(400).json({data: [], error: `Cet article existe déjà dans la base donnée, veuillez utiliser un livre différent`});
+            }
+
+            response.status(500).json({data: [], error: `Désolé une erreur serveur est survenue, veuillez réessayer ultérieurement.`});
+        }
+    },
 };
 
 module.exports = bookController;
