@@ -24,3 +24,32 @@ Content-Type: application/json
     "ebook_price": 5.99,
     "publisher_id": 1
 }
+
+### update integral book
+PUT http://localhost:3000/api/books/10
+Content-Type: application/json
+
+{
+    "isbn_paperback": "978-1111111111",
+    "original_title": "original title",
+    "title": "titre du livre",
+    "summary": "Résumé",
+    "publication_year": 2021,
+    "language": "FR",
+    "page_count": 500,
+    "cover": "https://cdn1.booknode.com/book_cover/195/full/les-vampires-de-chicago-tome-1-certaines-mettent-les-dents-194651.jpg",
+    "paperback_price": 700,
+    "ebook_price": 500,
+    "publisher_id": 1
+}
+
+### update partiel book
+PATCH http://localhost:3000/api/books/10
+Content-Type: application/json
+
+{
+    "summary": "Lis le livre et fais ton propre résumé XD"
+}
+
+### delete book
+DELETE http://localhost:3000/api/books/10

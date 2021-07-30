@@ -12,6 +12,7 @@ const bookController = {
         try {
 
             const books = await bookDataMapper.getAll();
+
             response.render('books', { books });
 
         } catch (error) {
@@ -72,6 +73,53 @@ const bookController = {
             response.status(500).json({data: [], error: `Désolé une erreur serveur est survenue, veuillez réessayer ultérieurement.`});
         }
     },
+
+    /**
+     * Update book
+     * @param {object} _ express request
+     * @param {object} response express response
+     * @param {object} next express next function
+     */
+     async update(request, response, next) {
+        try {
+
+            const book = await bookDataMapper.updateBook(request.params.id);
+
+            if(!book){
+                return next();
+            }
+
+            book.request.body;
+
+
+            response.json({ data: book });
+        } catch (error) {
+            console.error(error);
+            response.status(500).json({ data: [], error: `A server error occurred, pleaze try again later`});
+        }
+    },
+
+    /**
+     * Delete book
+     * @param {object} _ express request
+     * @param {object} response express response
+     * @param {object} next express next function
+     */
+    async delete(request, response, next){
+        try {
+
+            const book = await bookDataMapper.deleteBook(request.params.id);
+
+            if(!book){
+                return next();
+            }
+
+            response.status(204).json();
+        } catch (error) {
+            console.error(error);
+            response.status(500).json({ data: [], error: `A server error occurred, pleaze try again later`});
+        }
+    }
 };
 
 module.exports = bookController;
