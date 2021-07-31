@@ -13,7 +13,7 @@ const authorController = {
 
             const authors = await authorDataMapper.getAll();
 
-            response.json({data: authors});
+            response.render('author', {authors});
 
         } catch (error) {
             console.error(error);

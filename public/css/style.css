@@ -1,20 +1,27 @@
+/* page */
 html {
     background-color: #F9FBF2;
-    padding: 10px;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
 }
 
 body {
-    height: 100%;
-    min-height:100%;
     display: flex;
+    justify-self: stretch;
     flex-direction: column;
+    padding: 10px;
+    width: 100%;
 }
 
-.home {
-    height: 78vh;
+
+/* partials */
+.main-container {
     text-align: center;
-    padding-top: 4em;
+    height: 100%;
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding: 10px 0;
 }
 
 .home h1 {
@@ -53,32 +60,55 @@ h1 {
     font-size: 2.2em;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 0;
-    
+footer {
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    line-height: 2.4em;
+    color: #F9FBF2;
 }
 
-article {
+/* Commun à books et author */
+.title-article {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 1em;
+}
+
+.container-article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* view books */
+.book-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
     height: 460px;
-    margin: 30px auto;
-    border: 1px dotted black;
+    margin: 30px;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 4px rgba(202, 202, 202, 0.5), 4px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.2s;
 }
-.header_footer-title {
+
+.book-card:hover {
+    transform: scale(1.1);
+}
+
+.book-card-header-footer {
     align-self: center;
 }
 
-.img_left-text_right {
+.img-left-text-right {
     display: flex;
     align-items: center;
 }
 
-.img_left-text_right p {
+.img-left-text-right p {
     width: 330px;
 }
 
@@ -89,7 +119,7 @@ img {
     margin-right: 20px;
 }
 
-h2 {
+.book-card h2 {
     font-weight: bold;
     padding: 10px 5px;
     text-align: center;
@@ -116,15 +146,36 @@ h3 {
     font-weight: bold;
 }
 
-.book-card-paperback_price {
+.book-card-paperback-price {
     padding-bottom: 10px;
 }
 
-footer {
+
+/* view authors */
+.author-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.2em;
     padding: 10px;
-    width: 100%;
-    height: 60px;
-    line-height: 2.4em;
-    color: #F9FBF2;
+    width: 350px;
+    margin: 30px auto;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 4px rgba(202, 202, 202, 0.5), 4px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.2s;
+}
+
+.author-card:hover {
+    transform: scale(1.1);
+}
+
+.author-title {
+    font-size: 1.5em;
+    padding-bottom: 1.4em;
+    font-weight: bold;
+}
+
+.author-card p {
+    text-align: left;
 }
 
