@@ -4,7 +4,7 @@ GET http://localhost:3000/api/sqdqsd
 ### get all books
 GET http://localhost:3000/api/books
 
-### get on book
+### get one book
 GET http://localhost:3000/api/books/1
 
 ### add a book
@@ -55,3 +55,38 @@ Content-Type: application/json
 
 ### delete book
 DELETE http://localhost:3000/api/books/10
+
+
+
+### get all authors
+GET http://localhost:3000/api/authors
+
+### get one author
+GET http://localhost:3000/api/authors/1
+
+### add a author
+POST http://localhost:3000/api/authors
+Content-Type: application/json
+
+{
+    "firstname": "Chloe",
+    "lastname": "Neill",
+    "nationality": "US",
+    "birthdate": "1975-05-17",
+    "website": "http://www.chloeneill.com/"
+}
+
+### update integral author
+PUT http://localhost:3000/api/authors/4
+Content-Type: application/json
+
+{
+    "firstname": "blablacar",
+    "lastname": "nom",
+    "nationality": "FR",
+    "birthdate": "1990-09-01",
+    "website": "http://www.trouveunsite.com/"
+}
+
+### delete author
+DELETE http://localhost:3000/api/authors/3

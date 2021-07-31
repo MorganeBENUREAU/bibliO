@@ -11,12 +11,28 @@ body {
     flex-direction: column;
 }
 
+.home {
+    height: 78vh;
+    text-align: center;
+    padding-top: 4em;
+}
+
+.home h1 {
+    font-size: 3em;
+}
+
+.home p {
+    padding-top: 3em;
+    width: 30%;
+    margin: auto;
+}
+
 header, footer {
     background-color: #7A0018;
 }
 
 header {
-    padding: 20px; 
+    padding: 20px 40px; 
     color: #F9FBF2;
     display: flex;
     justify-content: space-between;

@@ -1,19 +1,19 @@
-const bookDataMapper = require('../dataMappers/book');
+const authorDataMapper = require('../dataMappers/author');
 
-const bookController = {
+const authorController = {
 
     /**
-     * Get list of all books
+     * Get list of all authors
      * @param {object} _ express request not used
      * @param {object} response express response
      */
-    async allBookList (_, response) {
+    async allAuthorList (_, response) {
 
         try {
 
-            const books = await bookDataMapper.getAll();
+            const authors = await authorDataMapper.getAll();
 
-            response.render('books', { books });
+            response.json({data: authors});
 
         } catch (error) {
             console.error(error);
@@ -23,21 +23,21 @@ const bookController = {
     },
 
     /**
-     * Get one book of by its id
+     * Get one author of by its id
      * @param {object} _ express request
      * @param {object} _ response express response
      * @param {object} _ express next function
      */
-    async getOneBook (request, response, next) {
+    async getOneAuthor (request, response, next) {
 
         try {
-            const book = await bookDataMapper.getById(request.params.id);
+            const author = await authorDataMapper.getById(request.params.id);
 
-            if(!book){
+            if(!author){
                 return next();
             }
 
-            response.json({data: book })
+            response.json({data: author})
 
         } catch (error) {
             console.error(error);
@@ -47,7 +47,7 @@ const bookController = {
     },
 
     /**
-     * Add book
+     * Add author
      * @param {object} _ express request
      * @param {object} response express response
      * @param {object} next express next function
@@ -55,19 +55,19 @@ const bookController = {
     async add(request, response, next) {
         try {
 
-            const newBook = await bookDataMapper.addBook(request.body);
+            const newAuthor = await authorDataMapper.addAuthor(request.body);
 
-            if(!newBook){
+            if(!newAuthor){
                 return next();
             }
         
-            response.status(201).json({ data: newBook });
+            response.status(201).json({ data: newAuthor });
 
         } catch (error) {
             console.error(error);
 
             if(error.code === '23505'){
-                return response.status(400).json({data: [], error: `Ce livre existe déjà dans la base donnée, veuillez utiliser un livre différent`});
+                return response.status(400).json({data: [], error: `Cet auteur existe déjà dans la base donnée, veuillez utiliser un auteur différent`});
             }
 
             response.status(500).json({data: [], error: `Désolé une erreur serveur est survenue, veuillez réessayer ultérieurement.`});
@@ -75,7 +75,7 @@ const bookController = {
     },
 
     /**
-     * Update book
+     * Update author
      * @param {object} _ express request
      * @param {object} response express response
      * @param {object} next express next function
@@ -83,13 +83,13 @@ const bookController = {
      async update(request, response, next) {
         try {
 
-            const book = await bookDataMapper.updateBook({...request.body, id: request.params.id});
+            const author = await authorDataMapper.updateAuthor({...request.body, id: request.params.id});
 
-            if(!book){
+            if(!author){
                 return next();
             }
 
-            response.json({ data: book });
+            response.json({ data: author });
         } catch (error) {
             console.error(error);
             response.status(500).json({ data: [], error: `A server error occurred, pleaze try again later`});
@@ -97,7 +97,7 @@ const bookController = {
     },
 
     /**
-     * Delete book
+     * Delete author
      * @param {object} _ express request
      * @param {object} response express response
      * @param {object} next express next function
@@ -105,10 +105,10 @@ const bookController = {
     async delete(request, response, next){
         try {
 
-            const book = await bookDataMapper.deleteBook(request.params.id);
-
-            response.status(204).json();
+            const author = await authorDataMapper.deleteAuthor(request.params.id);
             
+            response.status(204).json();
+
         } catch (error) {
             console.error(error);
             response.status(500).json({ data: [], error: `A server error occurred, pleaze try again later`});
@@ -116,4 +116,4 @@ const bookController = {
     }
 };
 
-module.exports = bookController;
+module.exports = authorController;
