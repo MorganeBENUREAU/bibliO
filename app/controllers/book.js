@@ -83,14 +83,11 @@ const bookController = {
      async update(request, response, next) {
         try {
 
-            const book = await bookDataMapper.updateBook(request.params.id);
+            const book = await bookDataMapper.updateBook({...request.body, id: request.params.id});
 
             if(!book){
                 return next();
             }
-
-            book.request.body;
-
 
             response.json({ data: book });
         } catch (error) {

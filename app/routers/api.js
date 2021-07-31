@@ -14,7 +14,7 @@ router.route('/books')
 router.route('/books/:id(\\d+)')
     .get(bookController.getOneBook)
     .patch(bookController.update)
-    .put(bookController.update)
+    // .put(bookController.update)
     .delete(bookController.delete);
 
 

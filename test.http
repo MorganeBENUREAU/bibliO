@@ -26,7 +26,7 @@ Content-Type: application/json
 }
 
 ### update integral book
-PUT http://localhost:3000/api/books/10
+PUT http://localhost:3000/api/books/8
 Content-Type: application/json
 
 {
@@ -43,13 +43,15 @@ Content-Type: application/json
     "publisher_id": 1
 }
 
-### update partiel book
-PATCH http://localhost:3000/api/books/10
-Content-Type: application/json
 
-{
-    "summary": "Lis le livre et fais ton propre résumé XD"
-}
+# ### update partiel book
+# PATCH http://localhost:3000/api/books/8
+# Content-Type: application/json
+
+# {
+#     "original_title": "original title",
+#     "summary": "Lis le livre et fais ton propre résumé XD"
+# }
 
 ### delete book
 DELETE http://localhost:3000/api/books/10

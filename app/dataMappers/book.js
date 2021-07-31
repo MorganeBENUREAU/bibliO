@@ -18,8 +18,9 @@ const bookDataMapper = {
         return result.rows[0];
     },
 
-    async updateBook (id) {
-        const result = await client.query(`UPDATE book SET (isbn_paperback = $1, original_title = $2, title = $3, summary = $4, publication_year = $5, language = $6, page_count = $7, cover = $8, paperback_price = $9, isbn_ebook = $10, ebook_price = $11, publisher_id = $12) WHERE id = $13 RETURNING * `, [id]);
+    async updateBook (data) {
+        const result = await client.query(`UPDATE book SET isbn_paperback = $1, original_title = $2, title = $3, summary = $4, publication_year = $5, language = $6, page_count = $7, cover = $8, paperback_price = $9, isbn_ebook = $10, ebook_price = $11, publisher_id = $12 WHERE id = $13 RETURNING * `, [data.isbn_paperback, data.original_title, data.title, data.summary, data.publication_year, data.language, data.page_count, data.cover, data.paperback_price, data.isbn_ebook, data.ebook_price, data.publisher_id, data.id]);
+
         return result.rows[0];
     }, 
 
