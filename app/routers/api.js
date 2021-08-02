@@ -4,6 +4,7 @@ const apiController = require('../controllers/api');
 const bookController = require('../controllers/book');
 const authorController = require('../controllers/author');
 const genreController = require('../controllers/genre');
+const publisherController = require('../controllers/publisher');
 
 
 const router = express.Router();
@@ -39,7 +40,16 @@ router.route('/genres/:id(\\d+)')
     .delete(genreController.delete);
 
 
+router.route('/publishers')
+    .get(publisherController.allPublisherList)
+    .post(publisherController.add);
+ 
+router.route('/publishers/:id(\\d+)')
+    .get(publisherController.getOnePublisher)
+    .put(publisherController.update)
+    .delete(publisherController.delete);
 
+    
 router.use(apiController.notFoundResource);
 
 

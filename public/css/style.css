@@ -19,8 +19,6 @@ body {
 .main-container {
     text-align: center;
     height: 100%;
-    /* display: flex;
-    flex-wrap: wrap; */
     padding: 10px 0;
 }
 
@@ -42,7 +40,7 @@ nav {
 }
 
 nav a {
-    padding-left: 10px;
+    padding-left: 1em;
     font-size: 1.2em;
 }
 
@@ -182,3 +180,42 @@ h3 {
     text-align: left;
 }
 
+/* view genres */
+.genre-card {
+    width: 300px;
+    margin: 30px auto;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 4px rgba(202, 202, 202, 0.5), 4px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.2s;
+}
+
+.genre-card:hover {
+    transform: scale(1.1);
+}
+
+.genre-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.8em;
+}
+
+
+/* view publishers */
+.publisher-card {
+    padding: 1em;
+    width: 300px;
+    margin: 30px auto;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 4px rgba(202, 202, 202, 0.5), 4px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.2s;
+}
+
+.publisher-card:hover {
+    transform: scale(1.1);
+}
+
+.publisher-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 0.4em;
+}

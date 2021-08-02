@@ -122,3 +122,33 @@ Content-Type: application/json
 
 ### delete genre
 DELETE http://localhost:3000/api/genres/3
+
+
+
+## PUBLISHERS
+### get all publishers
+GET http://localhost:3000/api/publishers
+
+### get one publisher
+GET http://localhost:3000/api/publishers/1
+
+### add a publisher
+POST http://localhost:3000/api/publishers
+Content-Type: application/json
+
+{
+    "name": "Milady",
+    "country": "FR"
+}
+
+### update integral publisher
+PUT http://localhost:3000/api/publishers/3
+Content-Type: application/json
+
+{
+    "name": "foundaname",
+    "country": "US"
+}
+
+### delete publisher
+DELETE http://localhost:3000/api/publishers/3

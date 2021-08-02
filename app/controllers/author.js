@@ -100,7 +100,6 @@ const authorController = {
      * Delete author
      * @param {object} _ express request
      * @param {object} response express response
-     * @param {object} next express next function
      */
     async delete(request, response){
         try {

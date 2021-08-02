@@ -13,7 +13,7 @@ const genreController = {
 
             const genres = await genreDataMapper.getAll();
 
-            response.json({data: genres});
+            response.render('genre', {genres});
 
         } catch (error) {
             console.error(error);
@@ -100,7 +100,6 @@ const genreController = {
      * Delete genre
      * @param {object} _ express request
      * @param {object} response express response
-     * @param {object} next express next function
      */
     async delete(request, response){
         try {
