@@ -22,7 +22,7 @@ Install my-project with npm
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone [https://link-to-project](https://github.com/MorganeBENUREAU/bibliO)
 ```
 
 Go to the project directory

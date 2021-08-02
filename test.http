@@ -1,6 +1,9 @@
 ### API error 404
 GET http://localhost:3000/api/sqdqsd
 
+
+
+## BOOKS
 ### get all books
 GET http://localhost:3000/api/books
 
@@ -43,7 +46,7 @@ Content-Type: application/json
     "publisher_id": 1
 }
 
-
+#
 # ### update partiel book
 # PATCH http://localhost:3000/api/books/8
 # Content-Type: application/json
@@ -58,6 +61,7 @@ DELETE http://localhost:3000/api/books/10
 
 
 
+## AUTHORS
 ### get all authors
 GET http://localhost:3000/api/authors
 
@@ -89,4 +93,32 @@ Content-Type: application/json
 }
 
 ### delete author
-DELETE http://localhost:3000/api/authors/3
+DELETE http://localhost:3000/api/authors/4
+
+
+
+## GENRES
+### get all genres
+GET http://localhost:3000/api/genres
+
+### get one genre
+GET http://localhost:3000/api/genres/1
+
+### add a genre
+POST http://localhost:3000/api/genres
+Content-Type: application/json
+
+{
+    "label": "fantasy paranormal"
+}
+
+### update integral genre
+PUT http://localhost:3000/api/genres/3
+Content-Type: application/json
+
+{
+    "label": "autregenre"
+}
+
+### delete genre
+DELETE http://localhost:3000/api/genres/3

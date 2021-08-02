@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon",
-    "devinstall": "createdb -U postgres bookshelf; sqitch revert; sqitch deploy; psql -d bookshelf -f data/seeding.sql"
+    "devinstall": "createdb -U postgres bibliO; sqitch revert; sqitch deploy; psql -U postgres -d bibliO -f ./data/seeding.sql"
   },
   "repository": {
     "type": "git",

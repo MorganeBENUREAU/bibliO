@@ -23,7 +23,7 @@ const bookController = {
     },
 
     /**
-     * Get one book of by its id
+     * Get one book by its id
      * @param {object} _ express request
      * @param {object} _ response express response
      * @param {object} _ express next function

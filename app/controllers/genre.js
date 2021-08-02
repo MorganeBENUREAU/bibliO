@@ -1,19 +1,19 @@
-const authorDataMapper = require('../dataMappers/author');
+const genreDataMapper = require('../dataMappers/genre');
 
-const authorController = {
+const genreController = {
 
     /**
-     * Get list of all authors
+     * Get list of all genres
      * @param {object} _ express request not used
      * @param {object} response express response
      */
-    async allAuthorList (_, response) {
+    async allGenreList (_, response) {
 
         try {
 
-            const authors = await authorDataMapper.getAll();
+            const genres = await genreDataMapper.getAll();
 
-            response.render('author', {authors});
+            response.json({data: genres});
 
         } catch (error) {
             console.error(error);
@@ -23,21 +23,21 @@ const authorController = {
     },
 
     /**
-     * Get one author by its id
+     * Get one genre by its id
      * @param {object} _ express request
      * @param {object} _ response express response
      * @param {object} _ express next function
      */
-    async getOneAuthor (request, response, next) {
+    async getOneGenre (request, response, next) {
 
         try {
-            const author = await authorDataMapper.getById(request.params.id);
+            const genre = await genreDataMapper.getById(request.params.id);
 
-            if(!author){
+            if(!genre){
                 return next();
             }
 
-            response.json({data: author})
+            response.json({data: genre})
 
         } catch (error) {
             console.error(error);
@@ -47,7 +47,7 @@ const authorController = {
     },
 
     /**
-     * Add author
+     * Add genre
      * @param {object} _ express request
      * @param {object} response express response
      * @param {object} next express next function
@@ -55,19 +55,19 @@ const authorController = {
     async add(request, response, next) {
         try {
 
-            const newAuthor = await authorDataMapper.addAuthor(request.body);
+            const newGenre = await genreDataMapper.addGenre(request.body);
 
-            if(!newAuthor){
+            if(!newGenre){
                 return next();
             }
         
-            response.status(201).json({ data: newAuthor });
+            response.status(201).json({ data: newGenre });
 
         } catch (error) {
             console.error(error);
 
             if(error.code === '23505'){
-                return response.status(400).json({data: [], error: `Cet auteur existe déjà dans la base donnée, veuillez utiliser un auteur différent`});
+                return response.status(400).json({data: [], error: `Ce genre existe déjà dans la base donnée, veuillez utiliser un genre différent`});
             }
 
             response.status(500).json({data: [], error: `Désolé une erreur serveur est survenue, veuillez réessayer ultérieurement.`});
@@ -75,7 +75,7 @@ const authorController = {
     },
 
     /**
-     * Update author
+     * Update genre
      * @param {object} _ express request
      * @param {object} response express response
      * @param {object} next express next function
@@ -83,13 +83,13 @@ const authorController = {
      async update(request, response, next) {
         try {
 
-            const author = await authorDataMapper.updateAuthor({...request.body, id: request.params.id});
+            const genre = await genreDataMapper.updateGenre({...request.body, id: request.params.id});
 
-            if(!author){
+            if(!genre){
                 return next();
             }
 
-            response.json({ data: author });
+            response.json({ data: genre });
         } catch (error) {
             console.error(error);
             response.status(500).json({ data: [], error: `A server error occurred, pleaze try again later`});
@@ -97,7 +97,7 @@ const authorController = {
     },
 
     /**
-     * Delete author
+     * Delete genre
      * @param {object} _ express request
      * @param {object} response express response
      * @param {object} next express next function
@@ -105,7 +105,7 @@ const authorController = {
     async delete(request, response){
         try {
 
-            const author = await authorDataMapper.deleteAuthor(request.params.id);
+            const genre = await genreDataMapper.deleteGenre(request.params.id);
             
             response.status(204).json();
 
@@ -116,4 +116,4 @@ const authorController = {
     }
 };
 
-module.exports = authorController;
+module.exports = genreController;

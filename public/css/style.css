@@ -24,15 +24,6 @@ body {
     padding: 10px 0;
 }
 
-.home h1 {
-    font-size: 3em;
-}
-
-.home p {
-    padding-top: 3em;
-    width: 30%;
-    margin: auto;
-}
 
 header, footer {
     background-color: #7A0018;
@@ -66,6 +57,18 @@ footer {
     height: 60px;
     line-height: 2.4em;
     color: #F9FBF2;
+}
+
+/* view home */
+.home h1 {
+    font-size: 3em;
+    padding: 1.4em 0 1.2em 0; 
+}
+
+.home p {
+    padding-top: 2em;
+    width: 30%;
+    margin: auto;
 }
 
 /* Commun à books et author */
