@@ -8,25 +8,36 @@
 
 <% for (const author of authors) { %>
     <article class="author-card">
-        <a href="#">
-            <h2 class="author-title"> <%= author.firstname %> <%= author.lastname %> </h2>
 
-            <p> Nationalité: <%= author.nationality %> </p>
-            <p> 
-                Date de naissance: <% if (!author.birthdate) {%> 
-                    N/A <% }else { %> 
-                    <%= author.birthdate.getDay() %>/<%= author.birthdate.getMonth() %>/<%= author.birthdate.getFullYear() %>
-                    <% } %>
-            </p>
-            <p>
-                <% if (!author.deathdate) {%> 
-                    <% }else { %> 
-                        Date de mort:
-                        <%= author.deathdate.getFullYear() %>
-                    <% } %>
-            </p>
-            <p> Site internet: <a href="<%= author.website %>"><%= author.website %></a> </p>
-    </a>
+        <h2 class="author-title"> <%= author.firstname %> <%= author.lastname %> </h2>
+
+        <div class="container-card-book-and-book-link">
+
+            <div class="container-card-book">
+                <p>
+                    Nationalité: <%= author.nationality %>
+                </p>
+                
+                <p>
+                    Date de naissance: <% if (!author.birthdate) {%>
+                        N/A <% }else { %>
+                            <%= author.birthdate.getDay() %>/<%= author.birthdate.getMonth() %>/<%= author.birthdate.getFullYear() %>
+                        <% } %>
+                </p>
+
+                <p>
+                    <% if (!author.deathdate) {%>
+                        <% }else { %>
+                            Date de mort:
+                                <%= author.deathdate.getFullYear() %>
+                        <% } %>
+                </p>
+
+                <a href="<%= author.website %>">Site internet</a>
+            </div>
+
+            <a class="book-link" href="#">Livres</a>
+        </div>
     </article>
 <% } %>
 

@@ -1,7 +1,7 @@
 /* page */
 html {
     background-color: #F9FBF2;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Josefin Slab', serif;
     display: flex;
     min-height: 100vh;
 }
@@ -28,12 +28,13 @@ header, footer {
 }
 
 header {
-    padding: 20px 40px; 
+    padding: 0.8em 3em; 
     color: #F9FBF2;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 
 nav {
     display: flex;
@@ -41,16 +42,18 @@ nav {
 
 nav a {
     padding-left: 1em;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 h1 {
+    font-family: 'Tangerine', cursive;
+    font-size: 3em;
     font-weight: bold;
-    font-size: 2.2em;
+    line-height: 1.2em;
 }
 
 footer {
-    padding: 10px;
+    padding: 0.6em;
     width: 100%;
     height: 60px;
     line-height: 2.4em;
@@ -59,12 +62,13 @@ footer {
 
 /* view home */
 .home h1 {
-    font-size: 3em;
-    padding: 1.4em 0 1.2em 0; 
+    font-size: 3.2em;
+    padding: 1.2em 0 1em 0; 
 }
 
 .home p {
-    padding-top: 2em;
+    font-size: 1.3em;
+    padding-top: 1em;
     width: 30%;
     margin: auto;
 }
@@ -122,6 +126,7 @@ img {
 
 .book-card h2 {
     font-weight: bold;
+    font-size: 1.2em;
     padding: 10px 5px;
     text-align: center;
 }
@@ -133,12 +138,13 @@ h3 {
 }
 
 .book-card-summary {
-    font-size: 0.8em;
+    font-size: 0.85em;
     padding-bottom: 10px;
     text-align: justify;
 }
 
 .summary {
+    font-size: 1.1em;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -156,8 +162,6 @@ h3 {
 .author-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    line-height: 1.2em;
     padding: 10px;
     width: 350px;
     margin: 30px auto;
@@ -170,14 +174,27 @@ h3 {
     transform: scale(1.1);
 }
 
+.container-card-book-and-book-link {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-card-book {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.5em;
+}
+
 .author-title {
-    font-size: 1.5em;
+    font-size: 1.6em;
     padding-bottom: 1.4em;
     font-weight: bold;
 }
 
-.author-card p {
-    text-align: left;
+.book-link {
+    font-size: 1.1em;
+    font-weight: bolder;
 }
 
 /* view genres */
