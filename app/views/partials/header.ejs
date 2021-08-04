@@ -20,24 +20,38 @@
 </head>
 <body>
 
-    <header>
+    <header class="header">
         
         <h1><a href="/">Bibli ' O</a></h1>
 
-        <nav>
-            <a href="/api/books">
-                Livres
-            </a>
-            <a href="/api/genres">
-                Genres
-            </a>
-            <a href="/api/authors">
-                Auteurs
-            </a>
+        <nav class="navbar">
+            <div class="nav">
+                <a href="/api/books">
+                    Livres
+                </a>
+                <a href="/api/genres">
+                    Genres
+                </a>
+                <a href="/api/authors">
+                    Auteurs
+                </a>
+                <a href="/api/publishers">
+                    Editeurs
+                </a>
+            </div>
 
-            <a href="/api/publishers">
-                Editeurs
-            </a>
+            <div class="connexion">
+                <% if(locals.user) { %>
+                    <a href="/api/profil">Mon compte</a>
+                    <a href="/api/disconnect">Se déconnecter</a>
+                    <% if(locals.user.role == "admin") { %>
+                        <a class="" href="/api/admin">Admin</a>
+                    <% } %>
+                <% } else {%>
+                    <a href="/api/login">Se connecter</a>
+                    <a href="/api/signup">S'inscrire</a>
+                <% } %>
+        </div>
 
         </nav>
 

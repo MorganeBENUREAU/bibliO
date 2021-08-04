@@ -22,12 +22,11 @@ body {
     padding: 10px 0;
 }
 
-
-header, footer {
+.header, .footer {
     background-color: #7A0018;
 }
 
-header {
+.header {
     padding: 0.8em 3em; 
     color: #F9FBF2;
     display: flex;
@@ -35,12 +34,13 @@ header {
     align-items: center;
 }
 
-
-nav {
+.navbar {
     display: flex;
+    justify-content: space-around;
+    width: 800px;
 }
 
-nav a {
+.navbar a {
     padding-left: 1em;
     font-size: 1.4em;
 }
@@ -50,6 +50,7 @@ h1 {
     font-size: 3em;
     font-weight: bold;
     line-height: 1.2em;
+    padding-left: 1.6em;
 }
 
 footer {
@@ -59,6 +60,62 @@ footer {
     line-height: 2.4em;
     color: #F9FBF2;
 }
+
+/* view login et signup*/
+.log-header {
+    text-align: center;
+    padding: 4em 0 4em 0;
+}
+
+.title-log-header {
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+}
+
+.main-log-form {
+    padding: 1em 0 2em 0;
+    margin: auto;
+}
+
+.login {
+    width: 360px;
+}
+
+.signup {
+    width: 430px;
+}
+
+.login-signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-group, .remember-checkbox {
+    padding-bottom: 0.6em;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+input .form-group{
+    width: 200px;
+}
+
+.text-muted {
+    font-size: 0.8em
+}
+
+.label-small-placement{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
 
 /* view home */
 .home h1 {

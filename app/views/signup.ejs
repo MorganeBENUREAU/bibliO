@@ -1,0 +1,57 @@
+<%- include('partials/header') %>
+
+<header class="log-header">
+  <h2 class="title-log-header">S'inscrire sur Bibli'O</h2>
+  <p>Inscrivez vous pour créer votre bibliothèque</p>
+</header>
+
+<main class="main-log-form signup">
+    <form action="/api/signup" method="POST" class="login-signup-form">
+
+        <% if(locals.error) { %>
+            <div class="form-group">
+            <div class="alert-danger">
+                <%= error %>
+            </div>
+            </div>
+        <% } %>
+
+        <div class="form-group">
+            <label for="lastname">Votre nom</label>
+            <input type="lastname" class="form-control" id="lastname" name="lastname" aria-describedby="lastnameHelp"
+            placeholder="Votre nom">
+        </div>
+
+        <div class="form-group">
+            <label for="firstname">Votre prénom</label>
+            <input type="firstname" class="form-control" id="firstname" name="firstname" aria-describedby="firstnameHelp"
+            placeholder="Votre prénom">
+        </div>
+
+        <div class="form-group">
+            <div class="label-small-placement">
+                <label for="email">Votre courriel</label>
+                <small id="emailHelp" class="text-muted">Nous ne partagerons jamais votre courriel.</small>
+            </div>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+            placeholder="Votre courriel">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Votre mot de mot de passe</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de mot de passe">
+        </div>
+
+
+        <div class="form-group">
+            <label for="passwordConfirm">Confirmez votre mot de passe</label>
+            <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm"
+            placeholder="Confirmez votre mot de passe">
+        </div>
+
+        <div>
+            <button type="submit" class="">Envoyer</button>
+        </div>
+    </form>
+</main>
+<%- include('partials/footer') %>

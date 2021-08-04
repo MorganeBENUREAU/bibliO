@@ -1,6 +1,7 @@
 const express = require('express');
 
 const apiController = require('../controllers/api');
+const userController = require('../controllers/user');
 const bookController = require('../controllers/book');
 const authorController = require('../controllers/author');
 const genreController = require('../controllers/genre');
@@ -8,6 +9,14 @@ const publisherController = require('../controllers/publisher');
 
 
 const router = express.Router();
+
+router.route('/login')
+    .get(userController.login)
+    .post(userController.checkLogin);
+
+router.route('/signup')
+    .get(userController.register)
+    .post(userController.registerSave);
 
 router.route('/books')
     .get(bookController.allBookList)

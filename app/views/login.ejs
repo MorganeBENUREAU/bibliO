@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<header class="log-header">
+  <h2 class="title-log-header">Se connecter sur Bibli'O</h2>
+  <p>Une application sympa pour trouver des livres de fantasy à lire.</p>
+</header>
+
+<main class="main-log-form login">
+    <form action="" method="POST" class="login-signup-form">
+
+        <div class="form-group">
+            <label for="email">Votre courriel</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                placeholder="Votre courriel">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Votre mot de passe</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">
+        </div>
+
+        <div class="remember-checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Se souvenir de moi
+            </label>
+        </div>
+
+        <div>
+            <button class="button-log-form" type="submit">Se connecter</button>
+        </div>
+
+    </form>
+</main>
+
+<%- include('partials/footer') %>
