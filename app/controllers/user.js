@@ -35,12 +35,7 @@ const userController = {
                 });
             }
 
-            const user = await userDataMapper.findOne({
-                where: {
-                    email: email,
-                }
-            });
-            console.log(user);
+            const user = await userDataMapper.findOne(email);
 
             if (user === null) {
                 response.render('login', {
@@ -51,6 +46,7 @@ const userController = {
 
             // On vérifie si le mot de passe est le bon grace à la fonction compare de bcrypt
             if (bcrypt.compareSync(password, user.password)) {
+
                 // On enregistre l'utilisateur en session
                 request.session.user = user;
                 
@@ -134,11 +130,8 @@ const userController = {
             }
 
             // On compte le nombre d'user avec l'email fourni
-            const emailDejaPresent = await userDataMapper.countEmail({
-                where: {
-                    email: email
-                }
-            });
+            const emailDejaPresent = await userDataMapper.countEmail(email);
+            console.log(emailDejaPresent);
 
             // Si il est > 0
             if (emailDejaPresent > 0) {

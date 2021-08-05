@@ -116,6 +116,9 @@ input .form-group{
     text-align: left;
 }
 
+.login-signup-form button {
+    margin-top: 1em;
+}
 
 /* view home */
 .home h1 {

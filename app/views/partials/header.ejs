@@ -41,17 +41,14 @@
             </div>
 
             <div class="connexion">
-                <% if(locals.user) { %>
-                    <a href="/api/profil">Mon compte</a>
-                    <a href="/api/disconnect">Se déconnecter</a>
-                    <% if(locals.user.role == "admin") { %>
-                        <a class="" href="/api/admin">Admin</a>
-                    <% } %>
-                <% } else {%>
-                    <a href="/api/login">Se connecter</a>
-                    <a href="/api/signup">S'inscrire</a>
+                <% if (locals.user) { %>
+                    <a class="" href="/api/logout">Se déconnecter</a>
+                    <a href="#">Bonjour <%= user.firstname %></a>
+                <% } else { %>
+                    <a class="" href="/api/login">Se connecter</a>
+                    <a class="" href="/api/signup">S'inscrire</a>
                 <% } %>
-        </div>
+            </div>
 
         </nav>
 

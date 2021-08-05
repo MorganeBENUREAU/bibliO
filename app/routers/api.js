@@ -10,6 +10,13 @@ const publisherController = require('../controllers/publisher');
 
 const router = express.Router();
 
+router.use((request, response, next) => {
+    // On charge dans les locals le contenu de la session pour le rendre accessible aux vues.
+    response.locals.user = request.session.user;
+    console.log(response.locals.user, request.session.user);
+    next();
+});
+
 router.route('/login')
     .get(userController.login)
     .post(userController.checkLogin);
@@ -17,6 +24,8 @@ router.route('/login')
 router.route('/signup')
     .get(userController.register)
     .post(userController.registerSave);
+
+router.get('/logout', userController.logout);
 
 router.route('/books')
     .get(bookController.allBookList)
