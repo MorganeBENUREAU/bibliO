@@ -49,6 +49,7 @@ const userController = {
 
                 // On enregistre l'utilisateur en session
                 request.session.user = user;
+                console.log(user);
                 
                 if (request.session.redirectAfterLogin) {
 
