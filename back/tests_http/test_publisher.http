@@ -1,0 +1,28 @@
+## PUBLISHERS
+
+### get all publishers
+GET http://localhost:3000/publisher
+
+### get one publisher
+GET http://localhost:3000/publisher/1
+
+### add a publisher
+POST http://localhost:3000/publisher
+Content-Type: application/json
+
+{
+    "name": "Milady",
+    "country": "FR"
+}
+
+### update integral publisher
+PUT http://localhost:3000/publisher/3
+Content-Type: application/json
+
+{
+    "name": "foundaname",
+    "country": "US"
+}
+
+### delete publisher
+DELETE http://localhost:3000/publisher/3

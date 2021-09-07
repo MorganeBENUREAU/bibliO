@@ -1,0 +1,27 @@
+## GENRES
+
+### get all genres
+GET http://localhost:3000/genre
+
+### get one genre
+GET http://localhost:3000/genre/1
+
+### add a genre
+POST http://localhost:3000/genre
+Content-Type: application/json
+
+{
+    "label": "fantasy paranormal"
+}
+
+### update integral genre
+PUT http://localhost:3000/genre/3
+Content-Type: application/json
+
+{
+    "label": "autregenre"
+}
+
+### delete genre
+DELETE http://localhost:3000/genre/3
+

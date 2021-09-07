@@ -1,0 +1,35 @@
+## AUTHORS
+
+### get all authors
+GET http://localhost:3000/author
+
+### get one author
+GET http://localhost:3000/author/1
+
+### add a author
+POST http://localhost:3000/author
+Content-Type: application/json
+
+{
+    "firstname": "Chloe",
+    "lastname": "Neill",
+    "nationality": "US",
+    "birthdate": "1975-05-17",
+    "website": "http://www.chloeneill.com/"
+}
+
+### update integral author
+PUT http://localhost:3000/author/4
+Content-Type: application/json
+
+{
+    "firstname": "blablacar",
+    "lastname": "nom",
+    "nationality": "FR",
+    "birthdate": "1990-09-01",
+    "website": "http://www.trouveunsite.com/"
+}
+
+### delete author
+DELETE http://localhost:3000/author/4
+

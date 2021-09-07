@@ -1,0 +1,58 @@
+## BOOKS
+
+### get all books
+GET http://localhost:3000/book
+
+### get one book
+GET http://localhost:3000/book/1
+
+### add a book
+POST http://localhost:3000/book
+Content-Type: application/json
+
+{
+    "isbn_paperback": "978-2-8112-0539-3",
+    "original_title": "Chicagoland Vampires",
+    "title": "Les Vampires de Chicago, Tome 1 : Certaines mettent les dents",
+    "summary": "Ils m’ont tuée. Ils m’ont soignée. Ils m’ont changée. Les vampires de Chicago ont décidé de révéler leur existence et ont fait de moi l’une des leurs. Certes, ma vie d’étudiante n’était pas très excitante, mais elle me convenait.     Maintenant je dois apprendre à maîtriser mes pouvoirs naissants sans pour autant jurer fidélité à Ethan Sullivan, le Maître de mon clan. D’accord, il m’a sauvé la vie, mais c’est quand même à cause de lui si je suis allergique au soleil ! S’il croit que je vais fondre sous prétexte qu’il a des siècles d’expérience en matière de séduction…     J’ai plus urgent : un tueur a une dent contre moi. Ça va saigner !",
+    "publication_year": 2011,
+    "language": "FR",
+    "page_count": 480,
+    "cover": "https://cdn1.booknode.com/book_cover/195/full/les-vampires-de-chicago-tome-1-certaines-mettent-les-dents-194651.jpg",
+    "paperback_price": 7.10,
+    "ebook_price": 5.99,
+    "publisher_id": 1
+}
+
+### update integral book
+PUT http://localhost:3000/book/8
+Content-Type: application/json
+
+{
+    "isbn_paperback": "978-1111111111",
+    "original_title": "original title",
+    "title": "titre du livre",
+    "summary": "Résumé",
+    "publication_year": 2021,
+    "language": "FR",
+    "page_count": 500,
+    "cover": "https://cdn1.booknode.com/book_cover/195/full/les-vampires-de-chicago-tome-1-certaines-mettent-les-dents-194651.jpg",
+    "paperback_price": 700,
+    "ebook_price": 500,
+    "publisher_id": 1
+}
+
+#
+### update partiel book // voir sur notabebe
+# PATCH http://localhost:3000/book/8
+# Content-Type: application/json
+
+# {
+#     "original_title": "original title",
+#     "summary": "Lis le livre et fais ton propre résumé XD"
+# }
+
+### delete book
+DELETE http://localhost:3000/book/10
+
+

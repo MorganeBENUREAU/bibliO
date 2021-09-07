@@ -1,0 +1,5 @@
+%syntax-version=1.0.0
+%project=bibliO
+
+init 2021-07-25T08:34:56Z MorganeBENUREAU <morgane.benureau@gmail.com> # initialisation du projet
+user_table 2021-08-04T16:04:36Z MorganeBENUREAU <morgane.benureau@gmail.com> # ajout d'une table user pour login et signup
