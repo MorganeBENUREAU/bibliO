@@ -2,6 +2,8 @@
 
 BEGIN;
 
-DROP TABLE "user";
+DROP TABLE "user" CASCADE;
+
+DROP DOMAIN email CASCADE;
 
 COMMIT;

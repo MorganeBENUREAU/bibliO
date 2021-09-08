@@ -6,21 +6,10 @@ const emailValidator = require('email-validator');
 const userController = {
 
     /**
-     * Show the login form
-     * 
-     * @param {Request} request 
-     * @param {Response} response 
-     */
-    login: (_, response) => {
-        response.render('login');
-    },
-
-
-    /**
      * Check that the login information entered by the user is correct
      * 
-     * @param {Request} request 
-     * @param {Response} response 
+     * @param {Object} request 
+     * @param {Object} response 
      */
     checkLogin: async (request, response) => {
 
@@ -30,10 +19,8 @@ const userController = {
             const password = request.body.password;
 
             if (!emailValidator.validate(request.body.email)) {
-                return response.render('login', {
-                error: "Cet email n'est pas valide."
-                });
-            }
+                return response.status(400).json({ error: "Cet email n'est pas valide." });
+            };
 
             const user = await userDataMapper.findOne(email);
 
@@ -49,7 +36,7 @@ const userController = {
 
                 // On enregistre l'utilisateur en session
 
-                
+                // ! revoir cette partie ...
                 if (request.session.redirectAfterLogin) {
 
                     response.redirect(request.session.redirectAfterLogin);

@@ -2,9 +2,10 @@
 
 ### get all books
 GET http://localhost:3000/book
+// a voir -> pas de render mais bug ??
 
 ### get one book
-GET http://localhost:3000/book/1
+GET http://localhost:3000/book/8
 
 ### add a book
 POST http://localhost:3000/book
@@ -53,6 +54,6 @@ Content-Type: application/json
 # }
 
 ### delete book
-DELETE http://localhost:3000/book/10
+DELETE http://localhost:3000/book/8
 
 

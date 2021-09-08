@@ -2,4 +2,34 @@
 GET http://localhost:3000/sqdqsd
 
 
+### ADDING A USER
+POST http://localhost:3000/signup
+Content-Type: application/json
+
+{
+    "email": "test@biblio.io",
+    "password": "test",
+    "firstname": "test",
+    "lastname": "DreamTeam",
+    "role_id": "1"
+}
+
+### try login 
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "test@biblio.io",
+    "password": "test"
+}
+
+
+### try login wrong password 
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "parent@notabebe.io",
+    "password": "test"
+}
 

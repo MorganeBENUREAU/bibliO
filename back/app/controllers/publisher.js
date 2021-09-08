@@ -4,29 +4,36 @@ const publisherController = {
 
     /**
      * Get list of all publishers
-     * @param {object} _ express request not used
-     * @param {object} response express response
+     * @param {Object} _ request not used
+     * @param {Array} response response of object
+     * @param {Object} next not found middleware
+     * @returns 
      */
-    async allPublisherList (_, response) {
+    async allPublisherList (_, response, next) {
 
         try {
 
             const publishers = await publisherDataMapper.getAll();
 
-            response.render('publisher', {publishers});
+            // if there is data, we respond with it; if not, we return next()
+            if (publishers) {
+                response.status(200).json(publishers);
+            } else {
+                return next();
+            };
 
         } catch (error) {
             console.error(error);
-            response.json({ data: [], error: `A servor error occurred, please try again later`});
-        }
+            response.status(500).json({ error: error.message });
+        };
         
     },
 
     /**
      * Get one publisher by its id
-     * @param {object} _ express request
-     * @param {object} _ response express response
-     * @param {object} _ express next function
+     * @param {object} request
+     * @param {object} response 
+     * @param {object} next not found middleware
      */
     async getOnePublisher (request, response, next) {
 
@@ -35,83 +42,87 @@ const publisherController = {
 
             if(!publisher){
                 return next();
-            }
+            };
 
-            response.json({data: publisher})
+            response.status(200).json(publisher);
 
         } catch (error) {
             console.error(error);
             response.json({ data: [], error: `A servor error occurred, please try again later`});
-        }
+        };
         
     },
 
     /**
-     * Add publisher
-     * @param {object} _ express request
-     * @param {object} response express response
-     * @param {object} next express next function
+     * Add a publisher
+     * @param {object} request
+     * @param {object} response 
+     * @param {object} next not found middleware
      */
     async add(request, response, next) {
+
         try {
 
             const newPublisher = await publisherDataMapper.addPublisher(request.body);
 
             if(!newPublisher){
                 return next();
-            }
+            };
         
-            response.status(201).json({ data: newPublisher });
+            response.status(201).json({ newPublisher });
 
         } catch (error) {
             console.error(error);
 
             if(error.code === '23505'){
                 return response.status(400).json({data: [], error: `Cet éditeur existe déjà dans la base donnée, veuillez utiliser un éditeur différent`});
-            }
+            };
 
-            response.status(500).json({data: [], error: `Désolé une erreur serveur est survenue, veuillez réessayer ultérieurement.`});
-        }
+            response.status(500).json({ error: error.message });
+        };
     },
 
     /**
-     * Update publisher
-     * @param {object} _ express request
-     * @param {object} response express response
-     * @param {object} next express next function
+     * Update a publisher
+     * @param {object} request
+     * @param {object} response 
+     * @param {object} next not found middleware
      */
      async update(request, response, next) {
+
         try {
 
             const publisher = await publisherDataMapper.updatePublisher({...request.body, id: request.params.id});
 
             if(!publisher){
                 return next();
-            }
+            };
 
-            response.json({ data: publisher });
+            response.status(200).json({ publisher });
+
         } catch (error) {
             console.error(error);
-            response.status(500).json({ data: [], error: `A server error occurred, pleaze try again later`});
-        }
+            response.status(500).json({ error: error.message });
+        };
     },
 
     /**
-     * Delete publisher
-     * @param {object} _ express request
-     * @param {object} response express response
+     * Delete a publisher
+     * @param {object} request
+     * @param {object} response 
      */
     async delete(request, response){
+
         try {
 
             const publisher = await publisherDataMapper.deletePublisher(request.params.id);
             
-            response.status(204).json();
+            response.status(204).json('éditeur bien supprimé');
 
         } catch (error) {
             console.error(error);
-            response.status(500).json({ data: [], error: `A server error occurred, pleaze try again later`});
-        }
+            response.status(500).json({ error: error.message });
+        };
     }
 };
 

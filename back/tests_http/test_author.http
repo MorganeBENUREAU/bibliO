@@ -4,14 +4,14 @@
 GET http://localhost:3000/author
 
 ### get one author
-GET http://localhost:3000/author/1
+GET http://localhost:3000/author/6
 
 ### add a author
 POST http://localhost:3000/author
 Content-Type: application/json
 
 {
-    "firstname": "Chloe",
+    "firstname": "Chloeee",
     "lastname": "Neill",
     "nationality": "US",
     "birthdate": "1975-05-17",
@@ -19,17 +19,17 @@ Content-Type: application/json
 }
 
 ### update integral author
-PUT http://localhost:3000/author/4
+PUT http://localhost:3000/author/3
 Content-Type: application/json
 
 {
-    "firstname": "blablacar",
-    "lastname": "nom",
+    "firstname": "Chloe",
+    "lastname": "Neill",
     "nationality": "FR",
-    "birthdate": "1990-09-01",
-    "website": "http://www.trouveunsite.com/"
+    "birthdate": "1975-05-17",
+    "website": "http://www.chloeneill.com/"
 }
 
 ### delete author
-DELETE http://localhost:3000/author/4
+DELETE http://localhost:3000/author/6
 
