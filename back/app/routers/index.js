@@ -27,13 +27,14 @@ router.use((request, response, next) => {
     next();
 });
 
+
+
 router.route('/login')
-    .get(userController.login)
     .post(userController.checkLogin);
 
 router.route('/signup')
-    .get(userController.register)
     .post(userController.registerSave);
+
 
 router.get('/logout', userController.logout);
 

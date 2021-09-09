@@ -25,18 +25,15 @@ const userController = {
             const user = await userDataMapper.findOne(email);
 
             if (user === null) {
-                response.render('login', {
-                    error: "Email ou mot de passe incorect"
-                });
+                response.status(400).json({ error: "Email ou mot de passe incorrect" });
                 return;
-            }
+            };
 
             // On vérifie si le mot de passe est le bon grace à la fonction compare de bcrypt
             if (bcrypt.compareSync(password, user.password)) {
 
                 // On enregistre l'utilisateur en session
-
-                // ! revoir cette partie ...
+                
                 if (request.session.redirectAfterLogin) {
 
                     response.redirect(request.session.redirectAfterLogin);
@@ -46,37 +43,21 @@ const userController = {
                     response.redirect('/');
                 };
 
-
             } else {
-                response.render('login', {
-                    error: "Email ou mot de passe incorect"
-                });
+                response.status(401).json({ error: "Email ou Mot de passe incorrect" });
             };
 
         } catch (error) {
             console.log(error);
-            response.render('login', {
-                error: error.message
-            });
-        }
-
-    },
-
-    /**
-     * Send signup form
-     * 
-     * @param {Request} request 
-     * @param {Response} response 
-     */
-    register: (_, response) => {
-        response.render('signup');
+            response.status(500).json({ error: error.message });
+        };
     },
 
     /**
      * Recording of data received by the login form
      * 
-     * @param {Request} request 
-     * @param {Response} response 
+     * @param {Object} request 
+     * @param {Object} response 
      */
     registerSave: async (request, response) => {
 
@@ -89,6 +70,7 @@ const userController = {
             const password = request.body.password;
             const passwordConfirm = request.body.passwordConfirm;
 
+
             const errors = [];
             console.log(firstname.length);
 
@@ -96,25 +78,25 @@ const userController = {
             if (firstname.length === 0) {
                 // Si elle est à 0, on rajoute une error à notre tableau
                 errors.push("Le prénom est obligatoire");
-            }
+            };
 
             if (lastname.length === 0) {
                 errors.push("Le nom de famille est obligatoire");
-            }
+            };
 
             if (password.length === 0) {
                 errors.push("Le mot de passe est obligatoire");
-            }
+            };
 
             // email valide ?
             if (!email.includes('@')) {
                 errors.push("L'email n'est pas valide");
-            }
+            };
 
             // mots de passes identiques ?
             if (password !== passwordConfirm) {
                 errors.push("Les mots de passe sont différents");
-            }
+            };
 
             // On compte le nombre d'user avec l'email fourni
             const emailDejaPresent = await userDataMapper.countEmail(email);
@@ -124,16 +106,14 @@ const userController = {
             if (emailDejaPresent > 0) {
                 // On rajoute une erreur
                 errors.push("Un compte existe déjà avec cet email");
-            }
+            };
 
             if (errors.length > 0) {
                 // En cas d'erreurs détectées, on fait un rendu de la vue register
                 // En lui transmettant notre tableau d'erreur.
-                response.render('signup', {
-                    error: errors
-                });
+                response.json({ error: errors });
                 return;
-            }
+            };
 
             const hash = bcrypt.hashSync(password, 10);
 
@@ -153,10 +133,8 @@ const userController = {
 
         } catch (error) {
             console.log(error);
-            response.render('signup', {
-                error: error.message
-            });
-        }
+            response.status(500).json({ error: error.message });
+        };
 
     },
 
