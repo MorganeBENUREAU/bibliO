@@ -1,0 +1,19 @@
+.header { 
+    color: #F9FBF2;
+    background-color: #7A0018;
+    border: 1px solid yellow;
+    display: flex;
+    padding: 0.5rem;
+
+    &__title {
+        font-family: 'Tangerine', cursive;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    &__navbar {
+
+    }
+
+
+}
