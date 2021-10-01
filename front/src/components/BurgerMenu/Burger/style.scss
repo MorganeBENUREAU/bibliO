@@ -1,0 +1,21 @@
+.burger-menu {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    // z-index: 10;   
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    background-color: transparent;
+
+    .burger {
+        width: 2rem;
+        height: 0.25rem;
+        border-radius: 20px;
+        background-color: #F9FBF2;
+        transition: all 0.3s linear;
+       
+    }
+}
