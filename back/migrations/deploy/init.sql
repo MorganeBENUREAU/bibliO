@@ -25,7 +25,7 @@ COMMENT ON DOMAIN pint IS 'only positive integer is accepted';
 
 CREATE TABLE "publisher" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    "name" text NOT NULL UNIQUE,
+    "name" TEXT NOT NULL UNIQUE,
     "country" country_iso_code_2 NOT NULL,
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ
@@ -36,8 +36,8 @@ CREATE TABLE "author" (
     "firstname" TEXT NOT NULL,
     "lastname" TEXT NOT NULL,
     "nationality" country_iso_code_2 NOT NULL,
-    "birthdate" date,
-    "deathdate" date,
+    "birthdate" DATE,
+    "deathdate" DATE,
     "website" TEXT,
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ,
@@ -46,38 +46,38 @@ CREATE TABLE "author" (
 
 CREATE TABLE "genre" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    "label" text NOT NULL UNIQUE,
+    "label" TEXT NOT NULL UNIQUE,
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ
 );
 
 CREATE TABLE "book" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    "isbn_paperback" text,
+    "isbn_paperback" TEXT,
     "original_title" TEXT NOT NULL,
     "title" TEXT,
     "summary" TEXT NOT NULL,
-    "publication_year" int,
+    "publication_year" INT,
     "language" country_iso_code_2,
     "page_count" pint NOT NULL,
-    "cover" text,
-    "paperback_price" numeric NOT NULL,
-    "isbn_ebook" text,
-    "ebook_price" numeric NOT NULL,
-    "publisher_id" int NOT NULL REFERENCES "publisher"("id") ON DELETE CASCADE,
+    "cover" TEXT,
+    "paperback_price" NUMERIC NOT NULL,
+    "isbn_ebook" TEXT,
+    "ebook_price" NUMERIC NOT NULL,
+    "publisher_id" INT NOT NULL REFERENCES "publisher"("id") ON DELETE CASCADE,
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
     "updated_at" TIMESTAMPTZ
 );
 
 CREATE TABLE "book_has_author" (
-    "book_id" int NOT NULL REFERENCES "book"("id") ON DELETE CASCADE,
-    "author_id" int NOT NULL REFERENCES "author"("id") ON DELETE CASCADE,
+    "book_id" INT NOT NULL REFERENCES "book"("id") ON DELETE CASCADE,
+    "author_id" INT NOT NULL REFERENCES "author"("id") ON DELETE CASCADE,
     UNIQUE ("book_id", "author_id")
 );
 
 CREATE TABLE "book_has_genre" (
-    "book_id" int NOT NULL REFERENCES "book"("id") ON DELETE CASCADE,
-    "genre_id" int NOT NULL REFERENCES "genre"("id") ON DELETE CASCADE,
+    "book_id" INT NOT NULL REFERENCES "book"("id") ON DELETE CASCADE,
+    "genre_id" INT NOT NULL REFERENCES "genre"("id") ON DELETE CASCADE,
     UNIQUE ("book_id", "genre_id")
 );
 

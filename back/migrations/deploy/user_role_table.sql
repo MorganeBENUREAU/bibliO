@@ -18,9 +18,9 @@ INSERT INTO "role" ("label") VALUES
 CREATE TABLE "user" (
   "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "email" email NOT NULL,
-  "password" text NOT NULL,
-  "firstname" text NULL,
-  "lastname" text NULL,
+  "password" TEXT NOT NULL,
+  "firstname" TEXT NULL,
+  "lastname" TEXT NULL,
   "role_id" INT NOT NULL DEFAULT '2' REFERENCES "role"("id") ON DELETE CASCADE,
   "created_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
   "updated_at" TIMESTAMPTZ
