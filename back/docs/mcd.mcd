@@ -1,11 +1,11 @@
-GENRE: libellé
+GENRE: refGenre, libellé, crée_le, mis_à_jour_le
 contient, 0N GENRE, 1N LIVRE
-AUTEUR: référence, nom, prénom, liens site, date de naissance, date de mort, nationalité
+AUTEUR: refAuteur, nom, prénom, liens site, date de naissance, date de mort, nationalité, crée_le, mis_à_jour_le
 
 :
-LIVRE: référence, titre original, titre, résumé, genre, date de sortie, langue d'origine, nb page, image, prix broché, prix ebook
+LIVRE: refLivre, titre original, titre, résumé, genre, date de sortie, langue d'origine, nb page, image, prix broché, prix ebook, crée_le, mis_à_jour_le
 a écrit, 1N AUTEUR, 1N LIVRE
 
 :
 édite, 1N EDITEUR, 11 LIVRE
-EDITEUR: nom, nationalité
+EDITEUR: refEditeur, nom, nationalité, crée_le, mis_à_jour_le
