@@ -1,11 +1,11 @@
-GENRE: refGenre, libellé, crée_le, mis_à_jour_le
-contient, 0N GENRE, 1N LIVRE
-AUTEUR: refAuteur, nom, prénom, liens site, date de naissance, date de mort, nationalité, crée_le, mis_à_jour_le
+GENRE: refGenre, label
+has, 0N GENRE, 1N BOOK
+AUTHOR: refAuthor, firstname, lastname, nationality, bithdate, deathdate, website
 
 :
-LIVRE: refLivre, titre original, titre, résumé, genre, date de sortie, langue d'origine, nb page, image, prix broché, prix ebook, crée_le, mis_à_jour_le
-a écrit, 1N AUTEUR, 1N LIVRE
+BOOK: refBook, isbn_paperback, original_title, title, summary, publication_year, language, page_count, cover, paperback_price, isbn_ebook, ebook_price
+wrote, 1N AUTHOR, 1N BOOK
 
 :
-édite, 1N EDITEUR, 11 LIVRE
-EDITEUR: refEditeur, nom, nationalité, crée_le, mis_à_jour_le
+publishes, 1N PUBLISHER, 11 BOOK
+PUBLISHER: refPublisher, name, country

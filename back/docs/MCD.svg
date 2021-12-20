@@ -2,127 +2,120 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
 "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 
-<svg width="364" height="626" view_box="0 0 364 626"
+<svg width="292" height="542" view_box="0 0 292 542"
 xmlns="http://www.w3.org/2000/svg"
-xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Mon, 11 Oct 2021 06:10:40</desc>
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Thu, 21 Oct 2021 07:07:11</desc>
 
-<rect id="frame" x="0" y="0" width="364" height="626" fill="#f5f5f5" stroke="none" stroke-width="0"/>
+<rect id="frame" x="0" y="0" width="292" height="542" fill="#f7f7f7" stroke="none" stroke-width="0"/>
 
-<!-- Association contient -->
-<line x1="58" y1="102" x2="171" y2="102" stroke="#bf812d" stroke-width="2"/>
-<text x="112" y="119.0" fill="#01665e" font-family="Verdana" font-size="12">0,N</text>
-<line x1="171" y1="347" x2="171" y2="102" stroke="#bf812d" stroke-width="2"/>
-<text x="176.0" y="212" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<g id="association-contient">
-	<path d="M 189 77 a 14 14 90 0 1 14 14 V 102 h -64 V 91 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 203 102.0 v 11 a 14 14 90 0 1 -14 14 H 153 a 14 14 90 0 1 -14 -14 V 102.0 H 64" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="139" y="77" width="64" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="139" y1="102" x2="203" y2="102" stroke="#bf812d" stroke-width="1"/>
-	<text x="146" y="94.7" fill="#000000" font-family="Verdana" font-size="12">contient</text>
+<!-- Association publishes -->
+<line x1="242" y1="491" x2="129" y2="491" stroke="#8073ac" stroke-width="2"/>
+<text x="174" y="508.0" fill="#b35806" font-family="Verdana" font-size="12">1,N</text>
+<line x1="129" y1="305" x2="129" y2="491" stroke="#8073ac" stroke-width="2"/>
+<text x="134.0" y="441" fill="#b35806" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-publishes">
+	<path d="M 151 466 a 14 14 90 0 1 14 14 V 491 h -72 V 480 a 14 14 90 0 1 14 -14" fill="#b2abd2" stroke="#b2abd2" stroke-width="0"/>
+	<path d="M 165 491.0 v 11 a 14 14 90 0 1 -14 14 H 107 a 14 14 90 0 1 -14 -14 V 491.0 H 72" fill="#d8daeb" stroke="#d8daeb" stroke-width="0"/>
+	<rect x="93" y="466" width="72" height="50" fill="none" rx="14" stroke="#8073ac" stroke-width="2"/>
+	<line x1="93" y1="491" x2="165" y2="491" stroke="#8073ac" stroke-width="1"/>
+	<text x="100" y="483.7" fill="#000000" font-family="Verdana" font-size="12">publishes</text>
 </g>
 
-<!-- Association édite -->
-<line x1="295" y1="558" x2="171" y2="558" stroke="#bf812d" stroke-width="2"/>
-<text x="219" y="575.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<line x1="171" y1="347" x2="171" y2="558" stroke="#bf812d" stroke-width="2"/>
-<text x="176.0" y="491" fill="#01665e" font-family="Verdana" font-size="12">1,1</text>
-<g id="association-édite">
-	<path d="M 180 533 a 14 14 90 0 1 14 14 V 558 h -46 V 547 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 194 558.0 v 11 a 14 14 90 0 1 -14 14 H 162 a 14 14 90 0 1 -14 -14 V 558.0 H 46" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="148" y="533" width="46" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="148" y1="558" x2="194" y2="558" stroke="#bf812d" stroke-width="1"/>
-	<text x="155" y="550.7" fill="#000000" font-family="Verdana" font-size="12">édite</text>
+<!-- Association has -->
+<line x1="41" y1="85" x2="129" y2="85" stroke="#8073ac" stroke-width="2"/>
+<text x="78" y="102.0" fill="#b35806" font-family="Verdana" font-size="12">0,N</text>
+<line x1="129" y1="305" x2="129" y2="85" stroke="#8073ac" stroke-width="2"/>
+<text x="134.0" y="178" fill="#b35806" font-family="Verdana" font-size="12">1,N</text>
+<g id="association-has">
+	<path d="M 133 60 a 14 14 90 0 1 14 14 V 85 h -36 V 74 a 14 14 90 0 1 14 -14" fill="#b2abd2" stroke="#b2abd2" stroke-width="0"/>
+	<path d="M 147 85.0 v 11 a 14 14 90 0 1 -14 14 H 125 a 14 14 90 0 1 -14 -14 V 85.0 H 36" fill="#d8daeb" stroke="#d8daeb" stroke-width="0"/>
+	<rect x="111" y="60" width="36" height="50" fill="none" rx="14" stroke="#8073ac" stroke-width="2"/>
+	<line x1="111" y1="85" x2="147" y2="85" stroke="#8073ac" stroke-width="1"/>
+	<text x="118" y="77.7" fill="#000000" font-family="Verdana" font-size="12">has</text>
 </g>
 
-<!-- Association a écrit -->
-<line x1="295" y1="102" x2="295" y2="347" stroke="#bf812d" stroke-width="2"/>
-<text x="300.0" y="212" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<line x1="171" y1="347" x2="295" y2="347" stroke="#bf812d" stroke-width="2"/>
-<text x="230" y="364.0" fill="#01665e" font-family="Verdana" font-size="12">1,N</text>
-<g id="association-a écrit">
-	<path d="M 308 322 a 14 14 90 0 1 14 14 V 347 h -54 V 336 a 14 14 90 0 1 14 -14" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
-	<path d="M 322 347.0 v 11 a 14 14 90 0 1 -14 14 H 282 a 14 14 90 0 1 -14 -14 V 347.0 H 54" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
-	<rect x="268" y="322" width="54" height="50" fill="none" rx="14" stroke="#bf812d" stroke-width="2"/>
-	<line x1="268" y1="347" x2="322" y2="347" stroke="#bf812d" stroke-width="1"/>
-	<text x="275" y="339.7" fill="#000000" font-family="Verdana" font-size="12">a écrit</text>
+<!-- Association wrote -->
+<line x1="242" y1="85" x2="242" y2="305" stroke="#8073ac" stroke-width="2"/>
+<text x="247.0" y="178" fill="#b35806" font-family="Verdana" font-size="12">1,N</text>
+<line x1="129" y1="305" x2="242" y2="305" stroke="#8073ac" stroke-width="2"/>
+<text x="190" y="322.0" fill="#b35806" font-family="Verdana" font-size="12">1,N</text>
+<g id="association-wrote">
+	<path d="M 253 280 a 14 14 90 0 1 14 14 V 305 h -50 V 294 a 14 14 90 0 1 14 -14" fill="#b2abd2" stroke="#b2abd2" stroke-width="0"/>
+	<path d="M 267 305.0 v 11 a 14 14 90 0 1 -14 14 H 231 a 14 14 90 0 1 -14 -14 V 305.0 H 50" fill="#d8daeb" stroke="#d8daeb" stroke-width="0"/>
+	<rect x="217" y="280" width="50" height="50" fill="none" rx="14" stroke="#8073ac" stroke-width="2"/>
+	<line x1="217" y1="305" x2="267" y2="305" stroke="#8073ac" stroke-width="1"/>
+	<text x="224" y="297.7" fill="#000000" font-family="Verdana" font-size="12">wrote</text>
 </g>
 
 <!-- Entity GENRE -->
 <g id="entity-GENRE">
 	<g id="frame-GENRE">
-		<rect x="9" y="51" width="98" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="9" y="76.0" width="98" height="77" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="9" y="51" width="98" height="102" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="9" y1="76" x2="107" y2="76" stroke="#35978f" stroke-width="1"/>
+		<rect x="9" y="51" width="64" height="25" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<rect x="9" y="76.0" width="64" height="43" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="9" y="51" width="64" height="68" fill="none" stroke="#e08214" stroke-width="2"/>
+		<line x1="9" y1="76" x2="73" y2="76" stroke="#e08214" stroke-width="1"/>
 	</g>
-	<text x="36" y="68.7" fill="#000000" font-family="Verdana" font-size="12">GENRE</text>
-	<text x="14" y="93.7" fill="#000000" font-family="Verdana" font-size="12">refGenre</text>
+	<text x="19" y="68.7" fill="#000000" font-family="Verdana" font-size="12">GENRE</text>
+	<text x="14" y="93.8" fill="#000000" font-family="Verdana" font-size="12">refGenre</text>
 	<line x1="14" y1="96" x2="68" y2="96" stroke="#000000" stroke-width="1"/>
-	<text x="14" y="110.8" fill="#000000" font-family="Verdana" font-size="12">libellé</text>
-	<text x="14" y="127.8" fill="#000000" font-family="Verdana" font-size="12">crée_le</text>
-	<text x="14" y="144.8" fill="#000000" font-family="Verdana" font-size="12">mis_à_jour_le</text>
+	<text x="14" y="110.8" fill="#000000" font-family="Verdana" font-size="12">label</text>
 </g>
 
-<!-- Entity LIVRE -->
-<g id="entity-LIVRE">
-	<g id="frame-LIVRE">
-		<rect x="117" y="220" width="108" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="117" y="245.0" width="108" height="229" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="117" y="220" width="108" height="254" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="117" y1="245" x2="225" y2="245" stroke="#35978f" stroke-width="1"/>
+<!-- Entity PUBLISHER -->
+<g id="entity-PUBLISHER">
+	<g id="frame-PUBLISHER">
+		<rect x="201" y="449" width="82" height="25" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<rect x="201" y="474.0" width="82" height="59" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="201" y="449" width="82" height="84" fill="none" stroke="#e08214" stroke-width="2"/>
+		<line x1="201" y1="474" x2="283" y2="474" stroke="#e08214" stroke-width="1"/>
 	</g>
-	<text x="152" y="237.7" fill="#000000" font-family="Verdana" font-size="12">LIVRE</text>
-	<text x="122" y="262.7" fill="#000000" font-family="Verdana" font-size="12">refLivre</text>
-	<line x1="122" y1="265" x2="169" y2="265" stroke="#000000" stroke-width="1"/>
-	<text x="122" y="279.7" fill="#000000" font-family="Verdana" font-size="12">titre original</text>
-	<text x="122" y="296.7" fill="#000000" font-family="Verdana" font-size="12">titre</text>
-	<text x="122" y="313.7" fill="#000000" font-family="Verdana" font-size="12">résumé</text>
-	<text x="122" y="330.7" fill="#000000" font-family="Verdana" font-size="12">genre</text>
-	<text x="122" y="347.8" fill="#000000" font-family="Verdana" font-size="12">date de sortie</text>
-	<text x="122" y="364.8" fill="#000000" font-family="Verdana" font-size="12">langue d'origine</text>
-	<text x="122" y="381.8" fill="#000000" font-family="Verdana" font-size="12">nb page</text>
-	<text x="122" y="398.8" fill="#000000" font-family="Verdana" font-size="12">image</text>
-	<text x="122" y="415.8" fill="#000000" font-family="Verdana" font-size="12">prix broché</text>
-	<text x="122" y="432.8" fill="#000000" font-family="Verdana" font-size="12">prix ebook</text>
-	<text x="122" y="449.8" fill="#000000" font-family="Verdana" font-size="12">crée_le</text>
-	<text x="122" y="466.8" fill="#000000" font-family="Verdana" font-size="12">mis_à_jour_le</text>
+	<text x="207" y="466.7" fill="#000000" font-family="Verdana" font-size="12">PUBLISHER</text>
+	<text x="206" y="491.8" fill="#000000" font-family="Verdana" font-size="12">refPublisher</text>
+	<line x1="206" y1="494" x2="278" y2="494" stroke="#000000" stroke-width="1"/>
+	<text x="206" y="508.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="206" y="525.8" fill="#000000" font-family="Verdana" font-size="12">country</text>
 </g>
 
-<!-- Entity AUTEUR -->
-<g id="entity-AUTEUR">
-	<g id="frame-AUTEUR">
-		<rect x="235" y="9" width="120" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="235" y="34.0" width="120" height="161" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="235" y="9" width="120" height="186" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="235" y1="34" x2="355" y2="34" stroke="#35978f" stroke-width="1"/>
+<!-- Entity BOOK -->
+<g id="entity-BOOK">
+	<g id="frame-BOOK">
+		<rect x="73" y="186" width="112" height="25" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<rect x="73" y="211.0" width="112" height="213" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="73" y="186" width="112" height="238" fill="none" stroke="#e08214" stroke-width="2"/>
+		<line x1="73" y1="211" x2="185" y2="211" stroke="#e08214" stroke-width="1"/>
 	</g>
-	<text x="270" y="26.7" fill="#000000" font-family="Verdana" font-size="12">AUTEUR</text>
-	<text x="240" y="51.7" fill="#000000" font-family="Verdana" font-size="12">refAuteur</text>
-	<line x1="240" y1="54" x2="298" y2="54" stroke="#000000" stroke-width="1"/>
-	<text x="240" y="68.7" fill="#000000" font-family="Verdana" font-size="12">nom</text>
-	<text x="240" y="85.7" fill="#000000" font-family="Verdana" font-size="12">prénom</text>
-	<text x="240" y="102.8" fill="#000000" font-family="Verdana" font-size="12">liens site</text>
-	<text x="240" y="119.8" fill="#000000" font-family="Verdana" font-size="12">date de naissance</text>
-	<text x="240" y="136.8" fill="#000000" font-family="Verdana" font-size="12">date de mort</text>
-	<text x="240" y="153.8" fill="#000000" font-family="Verdana" font-size="12">nationalité</text>
-	<text x="240" y="170.8" fill="#000000" font-family="Verdana" font-size="12">crée_le</text>
-	<text x="240" y="187.8" fill="#000000" font-family="Verdana" font-size="12">mis_à_jour_le</text>
+	<text x="111" y="203.7" fill="#000000" font-family="Verdana" font-size="12">BOOK</text>
+	<text x="78" y="228.7" fill="#000000" font-family="Verdana" font-size="12">refBook</text>
+	<line x1="78" y1="231" x2="125" y2="231" stroke="#000000" stroke-width="1"/>
+	<text x="78" y="245.7" fill="#000000" font-family="Verdana" font-size="12">isbn_paperback</text>
+	<text x="78" y="262.7" fill="#000000" font-family="Verdana" font-size="12">original_title</text>
+	<text x="78" y="279.7" fill="#000000" font-family="Verdana" font-size="12">title</text>
+	<text x="78" y="296.7" fill="#000000" font-family="Verdana" font-size="12">summary</text>
+	<text x="78" y="313.8" fill="#000000" font-family="Verdana" font-size="12">publication_year</text>
+	<text x="78" y="330.8" fill="#000000" font-family="Verdana" font-size="12">language</text>
+	<text x="78" y="347.8" fill="#000000" font-family="Verdana" font-size="12">page_count</text>
+	<text x="78" y="364.8" fill="#000000" font-family="Verdana" font-size="12">cover</text>
+	<text x="78" y="381.8" fill="#000000" font-family="Verdana" font-size="12">paperback_price</text>
+	<text x="78" y="398.8" fill="#000000" font-family="Verdana" font-size="12">isbn_ebook</text>
+	<text x="78" y="415.8" fill="#000000" font-family="Verdana" font-size="12">ebook_price</text>
 </g>
 
-<!-- Entity EDITEUR -->
-<g id="entity-EDITEUR">
-	<g id="frame-EDITEUR">
-		<rect x="246" y="499" width="98" height="25" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
-		<rect x="246" y="524.0" width="98" height="93" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
-		<rect x="246" y="499" width="98" height="118" fill="none" stroke="#35978f" stroke-width="2"/>
-		<line x1="246" y1="524" x2="344" y2="524" stroke="#35978f" stroke-width="1"/>
+<!-- Entity AUTHOR -->
+<g id="entity-AUTHOR">
+	<g id="frame-AUTHOR">
+		<rect x="205" y="9" width="74" height="25" fill="#fdb863" stroke="#fdb863" stroke-width="0"/>
+		<rect x="205" y="34.0" width="74" height="127" fill="#fee0b6" stroke="#fee0b6" stroke-width="0"/>
+		<rect x="205" y="9" width="74" height="152" fill="none" stroke="#e08214" stroke-width="2"/>
+		<line x1="205" y1="34" x2="279" y2="34" stroke="#e08214" stroke-width="1"/>
 	</g>
-	<text x="267" y="516.7" fill="#000000" font-family="Verdana" font-size="12">EDITEUR</text>
-	<text x="251" y="541.7" fill="#000000" font-family="Verdana" font-size="12">refEditeur</text>
-	<line x1="251" y1="544" x2="311" y2="544" stroke="#000000" stroke-width="1"/>
-	<text x="251" y="558.8" fill="#000000" font-family="Verdana" font-size="12">nom</text>
-	<text x="251" y="575.8" fill="#000000" font-family="Verdana" font-size="12">nationalité</text>
-	<text x="251" y="592.8" fill="#000000" font-family="Verdana" font-size="12">crée_le</text>
-	<text x="251" y="609.8" fill="#000000" font-family="Verdana" font-size="12">mis_à_jour_le</text>
+	<text x="216" y="26.7" fill="#000000" font-family="Verdana" font-size="12">AUTHOR</text>
+	<text x="210" y="51.7" fill="#000000" font-family="Verdana" font-size="12">refAuthor</text>
+	<line x1="210" y1="54" x2="268" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="210" y="68.7" fill="#000000" font-family="Verdana" font-size="12">firstname</text>
+	<text x="210" y="85.8" fill="#000000" font-family="Verdana" font-size="12">lastname</text>
+	<text x="210" y="102.8" fill="#000000" font-family="Verdana" font-size="12">nationality</text>
+	<text x="210" y="119.8" fill="#000000" font-family="Verdana" font-size="12">bithdate</text>
+	<text x="210" y="136.8" fill="#000000" font-family="Verdana" font-size="12">deathdate</text>
+	<text x="210" y="153.8" fill="#000000" font-family="Verdana" font-size="12">website</text>
 </g>
 </svg>

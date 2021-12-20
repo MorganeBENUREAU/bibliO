@@ -3,14 +3,11 @@ import './style.scss';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import { useState } from 'react';
 
 import BurgerMenu from '../BurgerMenu';
 
 
-const Header = ({ isLogged, users, setUsers, setIsLogged }) => {
-    const [burgerIsOpen, setBurgerIsOpen] = useState(false);
-
+const Header = ({ isLogged, users, setUsers, setIsLogged, burgerIsOpen, setBurgerIsOpen }) => {
 
     axios.get('https://localhost:3000/login')
         .then((response) => {

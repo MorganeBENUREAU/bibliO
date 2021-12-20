@@ -1,12 +1,12 @@
-GENRE: <u>refGenre</u>, libellé, crée_le, mis_à_jour_le
+GENRE: <u>id</u>, label
 
-AUTEUR: <u>refAuteur</u>, nom, prénom, liens site, date de naissance, date de mort, nationalité, crée_le, mis_à_jour_le
+AUTHOR: <u>id</u>, firstname, lastname, nationality, bithdate, deathdate, website
 
-LIVRE: <u>refLivre</u>, titre original, titre, résumé, genre, date de sortie, langue d'origine, nb page, image, prix broché, prix ebook, crée_le, mis_à_jour_le, #refEditeur
+BOOK: <u>id</u>, isbn_paperback, original_title, title, summary, publication_year, language, page_count, cover, paperback_price, isbn_ebook, ebook_price, #publisher_id
 
-EDITEUR: <u>refEditeur</u>, nom, nationalité, crée_le, mis_à_jour_le
+PUBLISHER: <u>id</u>, name, country
 
 
-CONTIENT: <u>refGenre</u>, <u>refLivre</u>
+BOOK_HAS_GENRE: <u>genre_id</u>, <u>book_id</u>
 
-A_ECRIT: <u>refAuteur</u>, <u>refLivre</u>
+BOOK_HAS_AUTHOR: <u>author_id</u>, <u>book_id</u>
